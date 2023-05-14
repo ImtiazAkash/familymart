@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.Navbar {
+  display: flex;
+  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  padding: 6px;
+}
+
+.logo img {
+  height: 20px;
+  width: 100%;
+}
+
+.logo .openbtn {
+  margin-top: 6px;
+  margin-left: 8px;
+  border: none;
+  height: 25px;
+}
+
+.Navbar img {
+  margin: auto;
+}
+
+
+
+.right-side {
+  display: flex;
+  float: right;
+  margin-left: auto;
+  margin-right: 20px;
+  gap: 10px;
+}
+
+.Navbar .right-side .userbtn {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  border-radius: 8px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* here comes the body  */
+
+.container {
+  display: flex;
+}
+
+/* here comes the sidebar */
+
+.sidebar {
+  margin: 0 0 0 0;
+  padding: 0;
+  width: 0;
+  background-color: white;
+  height: 100vh;
+  overflow: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: fixed;
+  transition: 0.5s;
+  
+}
+
+.sidebar .link {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+.sidebar .link.active {
+  color: #2952B9;
+  background-color: rgb(193, 222, 240);
+}
+
+.sidebar .link:hover:not(.active) {
+  background-color: rgb(111, 98, 231, 0.2);
+}
+
+
+.showSidebar {
+  width: 250px;
+}
+
+.shrinkContent {
+  margin-left: 250px;
+}
+
+.content {
+  width: 100%;
+  transition: 0.5s;
+  padding: 12px;
+}
+
+.showDropdown {
+  display: block;
+  padding-left: 10px;
+  transition: 15s;
+  border-radius: 12px;
+}
+
+.hideDropdown {
+  display: none;
+  transition: 0.5s;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+  .sidebar {
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      height: 100vh;
+      left: 0;
+      background-color: white;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 10px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .sidebar .link {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      transition: 0.3;
+  }
+
+  .sidebar .closebtn {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 25px;
+      border: none;
+      background-color: white;
+      border-radius: 50px;
+      
+
+  }
+
+  .sidebar .closebtn:hover {
+    background-color: rgb(194, 204, 233, 0.5);
+    transition: 0.8s;
+  }
+
+  .showSidebar {
+    width: 200px;
+  }
+  
+  .shrinkContent {
+    margin-left: 200px;
+  }
+  
+  .content {
+
+    transition: 0.5s;
+    padding: 12px;
+
+  }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .sidebar {
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      height: 100vh;
+      left: 0;
+      background-color: white;
+      overflow-x: hidden;
+      transition: .5s;
+  }
+
+  .sidebar .link {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      display: block;
+      transition: 0.3;
+  }
+
+
+  .showSidebar {
+    width: 100%;
+  }
+  
+  .shrinkContent {
+    margin-left: 0;
+
+  } 
+  
+
+}

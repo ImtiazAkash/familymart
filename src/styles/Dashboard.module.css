@@ -1,0 +1,119 @@
+.container {
+  display: grid;
+  width: 80%;
+  margin: 0px auto 0px;
+  padding: 1rem;
+}
+
+.statistics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.sales {
+  display: flex;
+  background-color: white;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.5rem;
+  gap: 0.7rem;
+}
+
+.sales div {
+  display: flex;
+  flex-direction: column;
+}
+
+.sales div span {
+  font-size: 0.8rem;
+}
+
+.orders {
+  display: flex;
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  gap: 0.7rem;
+}
+
+.orders div {
+  display: flex;
+  flex-direction: column;
+}
+
+.orders div span {
+  font-size: 0.8rem;
+}
+
+.products {
+  display: flex;
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  gap: 0.7rem;
+}
+
+.products div {
+  display: flex;
+  flex-direction: column;
+}
+
+.products div span {
+  font-size: 0.8rem;
+}
+
+
+/* here come the order table  */
+
+
+.ordersTable {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow-x: auto;
+}
+
+.ordersTable .tableScroll {
+  min-height: 40vh;
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.ordersTable table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.ordersTable table th {
+  border-color: lightgray;
+  border-bottom: 1px solid;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.ordersTable table td {
+  border-color: lightgray;
+  border-bottom: 1px solid;
+  border-color: #979797;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ordersTable {
+    
+  }
+}
