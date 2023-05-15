@@ -1,50 +1,124 @@
 .Navbar {
-    display: flex;
-    height: 50px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    position: sticky;
-    top: 0;
-    background-color: white;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 0 8% 0 8%;
+  justify-content: space-between;
+}
+
+.logo {
+  flex: 0.5;
+  font-size: 1.5em;
+  font-style: italic;
+  margin-right: auto;
+  padding: 8px 16px;
+  /* text-align: center;
+  font-weight: bolder;
+  
+   */
+}
+
+
+
+
+.searchContainer {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+
+
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+  background-color: #e6ecf2;
+
+  &::placeholder {
+    color: #ccc;
+  }
+}
+
+.searchButton {
+  border: none;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #222836;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  width: 50px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0077cc;
+    color: #fff;
+  }
+}
+
+.right-side {
+  flex: 1;
+  text-align: right;
+  margin-left: auto;
+  padding: 8px 16px;
+  gap: 10px;
+}
+
+.right-side .userbtn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-size: 24px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.right-side .cartbtn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-size: 24px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .Navbar {
+    padding: 0 2% 0 2%;
+  }
+
+ 
+  
+}
+
+@media screen and (max-width: 600px) {
+
+  .Navbar {
+    padding: 0;
   }
   
   .logo {
-    display: grid;
-    grid-template-columns: 1fr 0.2fr;
-    padding: 6px;
+    display: none;
   }
-  
-  .logo img {
-    height: 20px;
-    width: 100%;
-  }
-  
-  .logo .openbtn {
-    margin-top: 6px;
-    margin-left: 8px;
-    border: none;
-    height: 25px;
-  }
-  
-  .Navbar img {
-    margin: auto;
-  }
-  
-  
-  
+
   .right-side {
-    display: flex;
-    float: right;
-    margin-left: auto;
-    margin-right: 20px;
-    gap: 10px;
+    padding: 8px 0 0 0;
   }
-  
-  .Navbar .right-side .userbtn {
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    font-size: 12px;
-    border-radius: 8px;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
+}
+
+

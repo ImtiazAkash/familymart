@@ -10,6 +10,7 @@ body {
   position: sticky;
   top: 0;
   background-color: white;
+  padding: 0 5% 0 5%;
 }
 
 .logo {
@@ -183,7 +184,10 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-
+ 
+  .Navbar {
+    padding: 0 2% 0 2%;
+  }
   .sidebar {
       width: 0;
       position: fixed;
