@@ -15,6 +15,7 @@
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scroll-snap-align: start;
+  
 }
 
 .carouselItem {
@@ -22,6 +23,7 @@
   margin-right: 10px;
   transition: transform 0.3s ;
   text-align: center;
+  cursor: pointer;
 }
 
 
@@ -51,4 +53,29 @@
 
 .carousel .nextbtn {
   right: 0;
+}
+
+.carousel .prevbtn.disabled {
+  background-color: transparent;
+  color: gray;
+
+}
+
+.carousel .nextbtn.disabled {
+  background-color: transparent;
+  color: gray;
+  
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  .carousel .prevbtn, .carousel .nextbtn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .carousel .prevbtn, .carousel .nextbtn {
+    display: none;
+  }
 }

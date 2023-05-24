@@ -59,16 +59,55 @@ function Home() {
   ];
   return (
     <div className={Class.container}>
-      <div className={Class.trendingSection}>
+      <div className={Class.Section}>
         <h2>Trending Products</h2>
         <div className={Class.trendingProducts}>
           <Carousel products={items} />
         </div>
       </div>
 
-      <div>Popular Products</div>
+      <div className={Class.Section}>
+        <h2>Popular Products</h2>
+        <div className={Class.trendingProducts}>
+          <Carousel products={items} />
+        </div>
+      </div>
 
-      <div>Products</div>
+      <div className={Class.productSection}>
+        <h2>All Products</h2>
+        <div className={Class.cardContainer}>
+          <Card
+            image={image}
+            productName={"Smart Fridge"}
+            productPrice={"350TK"}
+          />
+          <Card
+            image={image}
+            productName={"Smart Fridge"}
+            productPrice={"350TK"}
+          />
+          <Card
+            image={image}
+            productName={"Smart Fridge"}
+            productPrice={"350TK"}
+          />
+          <Card
+            image={image}
+            productName={"Smart Fridge"}
+            productPrice={"350TK"}
+          />
+          <Card
+            image={image}
+            productName={"Smart Fridge"}
+            productPrice={"350TK"}
+          />
+          <Card
+            image={image}
+            productName={"Smart Fridge"}
+            productPrice={"350TK"}
+          />
+        </div>
+      </div>
     </div>
   );
 }

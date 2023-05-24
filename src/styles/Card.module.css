@@ -5,8 +5,9 @@
     border-radius: 5px;
     padding: 10px;
     margin: auto;
+    text-align: left;
     width: 100%;
-    max-width: 200px; /* Optional maximum width for larger screens */
+    max-width: 300px; /* Optional maximum width for larger screens */
   }
   
   /* Card image */
@@ -34,7 +35,7 @@
   .buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    gap: 0.3rem;
   }
   
   .buttons button {
