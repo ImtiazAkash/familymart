@@ -4,7 +4,7 @@ import NavandSidebar from "./pages/dashboard/NavandSidebar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductGrid from "./pages/dashboard/ProductGrid";
 import Dashboard from "./pages/dashboard/Dashboard";
-import Navbar from "./pages/landingpage/Navbar";
+import Layout from "./pages/landingpage/Layout";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route exact path="categories" element={<AddCategory />} />
           <Route exact path="products" element={<ProductGrid />} />
         </Route>
-        <Route exact path="/" element={<Navbar />} />
+        <Route exact path="/" element={<Layout />} />
       </Routes>
     </BrowserRouter>
   );

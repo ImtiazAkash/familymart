@@ -1,0 +1,41 @@
+.container {
+  display: grid;
+  width: 90%;
+  margin: 0px auto 0px;
+}
+
+.trendingSection {
+    width: 100%;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+  overflow-x: auto;
+
+}
+
+.trendingProducts {
+  background-color: white;
+  border-radius: 10px;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  /* overflow-x: auto; */
+}
+
+@media only screen and (max-width: 760px) {
+    .trendingProducts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        
+    }
+    .trendingProducts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
