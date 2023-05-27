@@ -2,11 +2,14 @@ import React from "react";
 import Class from "../../styles/Navbar.module.css";
 import logo from "../../assests/images/logo3.png";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+
+  const navigate = useNavigate();
   return (
     <div>
-      <div className={Class.Navbar}>
+      <div className={Class.topnav}>
         <div className={Class.logo}>
           <span>FamilyMart</span>
         </div>
@@ -17,7 +20,9 @@ function Navbar() {
         </form>
 
         <div className={Class["right-side"]}>
-          <button className={Class.userbtn} to="#login">
+          <button className={Class.userbtn} onClick={() => {
+            navigate("/auth/login")
+          }}>
             <AiOutlineUser />
           </button>
           <button className={Class.cartbtn} to="#signup">

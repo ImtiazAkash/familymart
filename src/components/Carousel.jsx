@@ -47,21 +47,6 @@ function Carousel({ products }) {
   };
 
   useEffect(() => {
-    let intervalId = null;
-    let currentIndex = 0;
-
-    const startAutoScroll = () => {
-      intervalId = setInterval(() => {
-        carouselRef.current.scrollLeft =
-          carouselRef.current.offsetWidth * currentIndex;
-        currentIndex = (currentIndex + 1) % products.length;
-      }, 3000); // Adjust the auto-scroll speed (milliseconds)
-    };
-
-    const stopAutoScroll = () => {
-      clearInterval(intervalId);
-    };
-
     const handleScroll = () => {
       const scrollPosition = carouselRef.current.scrollLeft;
       const maxScroll = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
@@ -70,18 +55,7 @@ function Carousel({ products }) {
       setIsNextDisabled(scrollPosition === maxScroll);
     };
 
-    carouselRef.current.addEventListener("mouseenter", stopAutoScroll);
-    carouselRef.current.addEventListener("mouseleave", startAutoScroll);
     carouselRef.current.addEventListener('scroll', handleScroll);
-
-    startAutoScroll();
-
-    return () => {
-      carouselRef.current.removeEventListener("mouseenter", stopAutoScroll);
-      carouselRef.current.removeEventListener("mouseleave", startAutoScroll);
-      carouselRef.current.removeEventListener('scroll', handleScroll);
-      stopAutoScroll();
-    };
   }, [products]);
 
   return (

@@ -1,4 +1,4 @@
-.Navbar {
+.topnav {
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: sticky;
@@ -30,6 +30,7 @@
   background-color: #fff;
   border-radius: 8px;
   padding: 10px;
+  margin: 0;
 
 
 }
@@ -63,10 +64,6 @@
   width: 50px;
   cursor: pointer;
 
-  &:hover {
-    background-color: #0077cc;
-    color: #fff;
-  }
 }
 
 .right-side {
@@ -98,7 +95,7 @@
 
 
 @media screen and (max-width: 767px) {
-  .Navbar {
+  .topnav {
     padding: 0 2% 0 2%;
   }
 
@@ -108,7 +105,7 @@
 
 @media screen and (max-width: 600px) {
 
-  .Navbar {
+  .topnav {
     padding: 0;
   }
   

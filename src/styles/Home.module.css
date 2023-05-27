@@ -29,7 +29,7 @@
   border-radius: 10px;
   gap: 0.4rem;
   padding: 0.5rem;
-  /* overflow-x: auto; */
+  overflow-x: auto;
 }
 
 .cardContainer {
@@ -41,18 +41,15 @@
 }
 
 @media only screen and (max-width: 767px) {
-    .trendingProducts {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .cardContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 
 @media only screen and (max-width: 600px) {
 
-    .container {
-        
-    }
-    .trendingProducts {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .cardContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

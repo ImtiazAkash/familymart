@@ -1,5 +1,6 @@
-.card {
-    display: inline-block;
+/* .card {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px #ccc;
     border-radius: 5px;
@@ -7,17 +8,19 @@
     margin: auto;
     text-align: left;
     width: 100%;
-    max-width: 300px; /* Optional maximum width for larger screens */
+    max-width: 200px;
   }
+
   
-  /* Card image */
+
   .card img {
-    width: 100%;
-    height: auto;
+    width: 186px;
+    height: 186px;
     border-radius: 5px;
+
   }
   
-  /* Card title */
+
   .card .productName span {
     display: -webkit-box;
     margin-top: 0;
@@ -27,7 +30,7 @@
     overflow: hidden;
   }
   
-  /* Card content */
+
   .card .productPrice span {
     font-size: 1rem;
   }
@@ -49,4 +52,49 @@
   .buttons .delete {
     color: red;
     border: 1px solid black;
+  } 
+
+
+
+  
+   */
+
+
+   .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 8px;
+    width: 200px;
+    height: 350px;
+    text-align: left;
+    padding: 8px 16px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border: 1px solid;
+  }
+
+  .card img {
+    width: 186px;
+    height: 186px;
+  }
+  
+  .container {
+
+  }
+
+  .container b {
+    display: -webkit-box;
+    margin-top: 0;
+    font-size: 1rem;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+  }
+
+  .card .action {
+    display: flex;
+    flex-direction: row;
   }

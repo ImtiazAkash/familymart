@@ -3,12 +3,18 @@ import Class from "../../styles/Home.module.css";
 import Card from "../../components/Card";
 import image from "../../assests/images/fridge.jpg";
 import Carousel from "../../components/Carousel";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 function Home() {
+
+
   const items = [
     <Card
       image={image}
-      productName={"smart fridge"}
+      productName={"smart frasdfas sdafgasddsaf"}
       productPrice={"69000tk"}
     />,
     <Card
@@ -59,10 +65,11 @@ function Home() {
   ];
   return (
     <div className={Class.container}>
+      
       <div className={Class.Section}>
         <h2>Trending Products</h2>
         <div className={Class.trendingProducts}>
-          <Carousel products={items} />
+          <Carousel products={items}/>
         </div>
       </div>
 

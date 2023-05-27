@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import Class from "../../styles/AddCategory.module.css";
 import { MdCloudUpload } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import { getCategory, saveCategory } from "../../services/category";
 // import axios from 'axios'
 
 function AddCategory() {
   const [image, setImage] = useState();
+  const [error, setError] = useState("");
   const [category, setCategory] = useState();
+  const [categoryName, setCategoryName] = useState();
+  const [categoryDescription, setCategoryDescription] = useState();
 
   const onImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
@@ -14,21 +18,50 @@ function AddCategory() {
     }
   };
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products/categories")
-      .then((res) => res.json())
-      .then((json) => setCategory(json));
-  }, []);
+  async function handleSubmit(e) {
+    e.preventDefault();
 
-  console.log(category);
+    const sendCategory = {
+      categoryName: categoryName,
+      categoryDescription: categoryDescription,
+    }
+
+    try {
+      setError("");
+  
+      saveCategory(sendCategory)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => console.log(error))
+    } catch(error) {
+      console.log(error);
+      setError("error occured");
+    }
+
+
+  }
+  
+  function loadCategory() {
+    try {
+      getCategory().then((res) => {
+        setCategory(res.data)
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(() => {
+    loadCategory()
+  }, [category])
 
   return (
     <div className={Class.container}>
       <div className={Class.formTitle}>Add Categories</div>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <div className={Class.input}>
           <label htmlFor="">Category Name</label>
-          <input type="text" placeholder="Enter Name" />
+          <input type="text" placeholder="Enter Name" value={categoryName} onChange={(e)=> setCategoryName(e.target.value)} required/>
         </div>
 
         <div className={Class.input}>
@@ -38,6 +71,9 @@ function AddCategory() {
             id="description"
             rows="3"
             placeholder="Write Description"
+            value={categoryDescription}
+            onChange={(e)=> setCategoryDescription(e.target.value)}
+            required
           />
         </div>
 
@@ -63,14 +99,16 @@ function AddCategory() {
           <tr>
             <th>Category ID</th>
             <th>Category Name</th>
+            <th>Category Description</th>
             <th>Edit</th>
           </tr>
           {category &&
             category.map((val, index) => {
               return (
                 <tr>
-                  <td>1</td>
-                  <td>{val}</td>
+                  <td>{val.categoryID}</td>
+                  <td>{val.categoryName}</td>
+                  <td>{val.categoryDescription}</td>
                   <td>
                     <FaEdit />
                   </td>
