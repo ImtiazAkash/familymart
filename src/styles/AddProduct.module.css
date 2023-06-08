@@ -22,6 +22,9 @@
   border-radius: 5px;
   padding: 0 1.5em 1em;
   font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 .container form label {

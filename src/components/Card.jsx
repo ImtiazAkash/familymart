@@ -5,39 +5,28 @@ import { MdDelete } from "react-icons/md";
 
 function Card({ image, productName, productPrice }) {
   return (
-    // <div className={Class.card}>
-    //     <img src={image} alt="Card" />
-    //     <div className={Class.productName}>
-    //       <span>{productName}</span>
-    //     </div>
-    //     <div className={Class.productPrice}>
-    //       <span>{productPrice}</span>
-    //     </div>
-
-    //     <div className={Class.buttons}>
-    //       <button className={Class.edit}>
-    //         <HiPencil />
-    //         Edit
-    //       </button>
-    //       <button className={Class.delete}>
-    //         <MdDelete />
-    //         Delete
-    //       </button>
-    //     </div>
-    //   </div>
-
     <div className={Class.card}>
-      <img src={image} alt="" />
-      <div className={Class.container}>
-        <b>{productName}</b>
+        <img src={image} alt="Card" />
+        <div className={Class.productName}>
+          <span>{productName}</span>
+        </div>
+        <div className={Class.productPrice}>
+          <span>{productPrice}</span>
+        </div>
 
-        <p>{productPrice}</p>
+        <div className={Class.buttons}>
+          <button className={Class.edit}>
+            <HiPencil />
+            Edit
+          </button>
+          <button className={Class.delete}>
+            <MdDelete />
+            Delete
+          </button>
+        </div>
       </div>
-      <div className={Class.actions}>
-        <button>edit</button>
-        <button>delete</button>
-      </div>
-    </div>
+
+    
   );
 }
 

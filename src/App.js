@@ -8,6 +8,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/landingpage/Home";
 import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
+import ProductPage from "./pages/productpage/ProductPage";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="home" element={<Home />} />
           <Route exact path="/auth/login" element={<Login />} />
           <Route exact path="/auth/signup" element={<Signup />} />
+          <Route exact path="/productpage" element={<ProductPage />} />
 
         </Route>
 

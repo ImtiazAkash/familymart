@@ -14,7 +14,7 @@ function Home() {
   const items = [
     <Card
       image={image}
-      productName={"smart frasdfas sdafgasddsaf"}
+      productName={"smart fridge"}
       productPrice={"69000tk"}
     />,
     <Card
