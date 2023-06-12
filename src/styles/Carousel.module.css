@@ -1,5 +1,5 @@
 .carousel {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -15,16 +15,17 @@
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scroll-snap-align: start;
+  gap: 1rem;
+  width: 100%;
 
   
 }
 
 .carouselItem {
-  flex: 0 1 1;
   margin-right: 10px;
   transition: transform 0.3s ;
   cursor: pointer;
-
+  width: 25%;
 }
 
 

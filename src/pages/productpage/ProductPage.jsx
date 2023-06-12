@@ -57,14 +57,13 @@ function ProductPage() {
           </p>
         </div>
 
-        <div className={Class.cart}> 
-            <span>Price: 30TK</span>
-            <span>Location: Block-A, Lane-4, Mirpur-6</span>
-            <span>Stock: 3</span>
-            <span>Shipping Cost: 50TK</span>
-            <hr />
-            <button>Add to Cart</button>
-
+        <div className={Class.cart}>
+          <span>Price: 30TK</span>
+          <span>Location: Block-A, Lane-4, Mirpur-6</span>
+          <span>Stock: 3</span>
+          <span>Shipping Cost: 50TK</span>
+          <hr />
+          <button>Add to Cart</button>
         </div>
       </div>
     </div>

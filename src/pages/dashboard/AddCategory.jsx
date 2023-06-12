@@ -32,6 +32,7 @@ function AddCategory() {
       saveCategory(sendCategory)
       .then((res) => {
         console.log(res.data);
+        loadCategory();
       })
       .catch((error) => console.log(error))
     } catch(error) {
@@ -53,7 +54,7 @@ function AddCategory() {
   }
   useEffect(() => {
     loadCategory()
-  }, [category])
+  }, [])
 
   return (
     <div className={Class.container}>
